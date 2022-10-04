@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 //comment the above line and uncomment below line to use Chrome
 //import org.openqa.selenium.chrome.ChromeDriver;
 public class Test1 {
@@ -8,10 +9,10 @@ public class Test1 {
     public static void main(String[] args) {
         // declaration and instantiation of objects/variables
     	System.setProperty("webdriver.gecko.driver","E:\\Selenium Project\\geckodriver-v0.29.0-win64\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
-		//comment the above 2 lines and uncomment below 2 lines to use Chrome
-		//System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
+       WebDriver driver = new FirefoxDriver();
+    	
+    	//System.setProperty("webdriver.ie.driver","E:\\Selenium Project\\IEDriverServer.exe");
+		//WebDriver driver = new InternetExplorerDriver();  
     	
         String baseUrl = "http://demo.guru99.com/test/newtours/";
         String expectedTitle = "Welcome: Mercury Tours";

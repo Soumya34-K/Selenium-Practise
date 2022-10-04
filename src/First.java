@@ -43,8 +43,13 @@ public class First {
 		System.out.println(Results);
 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		js2.executeScript("window.scrollBy(0,250)", "");
+		
+		//Clicking on Link
 		driver.findElement(By.xpath("//span[normalize-space()='Links']")).click();
-		driver.findElement(By.xpath("//a[@id='simpleLink']")).click();
+		driver.findElement(By.linkText("Home")).click();
+		
+		
+		
 		
 
 	}
