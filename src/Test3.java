@@ -16,6 +16,11 @@ public class Test3 {
 		js.executeScript("window.scrollBy(0,250)", "");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']")).click();
+		String Title=driver.getTitle();
+		int titleLength = driver.getTitle().length();  
+		System.out.println("Title of the page is : " + Title);
+		System.out.println("Length of the title is : "+ titleLength);  
+		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("window.scrollBy(0,450)", "");
 		driver.findElement(By.xpath("//span[text()='Alerts']")).click();
@@ -29,9 +34,11 @@ public class Test3 {
 		Alert promtBox = driver.switchTo().alert();
 		String alertText = promtBox.getText();
 		System.out.println(alertText);
-		promtBox.sendKeys("Soumya K");
+		promtBox.sendKeys("How are you");
 		Thread.sleep(2000);
 		promtBox.accept();
+		Thread.sleep(2000);
+		driver.quit();
 		
 	}
 
